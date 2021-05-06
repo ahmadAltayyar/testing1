@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> moviena </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+        * {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: tahoma; 
+}
+        body{
+            background-color: rgb(15,17,21);
+            width: 100%;
+        }
+
+        /*
+        set the proprteis of the header 
+        */
+        header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 25px 15px;
+            width: 100%;
+
+        }
+        header img[alt=logo] {
+            width: 75px;
+            cursor: pointer;
+            transition: all ease-in-out 250ms;
+        }
+        .allFlexBox {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-between;
+            width: 60%;
+        }
+        header .allFlexBox input {
+            padding: 7.5px;
+            max-width: 80%;
+            min-width: 50%;
+            border-radius: 20px;
+            background-color: rgb(25,24,31);
+            color: white;
+            font-size: 18px;
+            border: none;
+            margin-right: 15px;
+
+
+        }
+        header .allFlexBox ul {
+            list-style: none;
+            display: flex;
+            color: rgb(101,102,104);
+            justify-content: space-around;
+
+        }
+        header .allFlexBox ul li {
+            cursor: pointer;
+            margin-right: 20px;
+            transition: all ease-in-out 250ms;
+        }
+        header img[alt=avatar] {
+            border-radius: 50%;
+            width: 40px;
+            cursor: pointer;
+            transition: all ease-in-out 250ms;
+        }
+
+        /*
+        set the main body
+        */
+        .contaner {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+        }
+        .contaner .body {
+            width: 70%;
+            background-color: rgb(25,24,31);
+            border-radius: 25px;
+            padding: 20px 15px;
+        }
+        .contaner .body .cards{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+        }
+        @media screen and (max-width: 500px) {
+            .contaner .body .cards {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+            }
+        }
+        .contaner .body h2 {
+            color: white;
+            margin: 15px;
+            margin-left: 48px;
+
+        }
+
+        /*
+        =================
+        |    library    |
+        =================
+        */
+        .card {
+            padding: 10px;
+            font-size: 12px;
+            color: rgb(101,102,104);
+            box-sizing: unset;
+            cursor: pointer;
+            margin: 15 auto;
+        }
+        .img_card {
+            width: 200px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            transition: all ease-in-out 250ms;
+        }
+        .name {
+            font-size: 16px;
+            font-weight: bolder;
+            color: white;
+            margin-bottom: 10px;
+        }
+        img[alt=star] {
+            width: 17px;
+            display: inline;
+        }
+
+        /*
+        ============================
+        |    animation & action    |
+        ============================
+        */
+        header img[alt=logo]:hover ,header img[alt=avatar]:hover{
+            transform: scale(1.15);
+        }
+        header ul li:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+        .img_card:hover {
+            box-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="logo">
+        <div class="allFlexBox">
+            <input type="search" id="search" placeholder=" search for a movie">
+            <ul>
+                <li>Movie </li>
+                <li>TV shows </li>
+                <li>WacthList</li>
+            </ul>
+        </div>
+        <img src="img/avatar.png" alt="avatar">
+    </header>
+    
+    <div class="contaner">
+        
+        <div class="body">
+        <h2 id="h2OfBody"> picked for you </h2>
+            <div class="cards" id="cards">
+                <div class="card" id="Dangerous lies">
+                    <img src="https://upload.wikimedia.org/wikipedia/ar/0/03/Dangerous_Lies_poster.jpg" class="img_card">
+                    <p class="name">Dangerous lies</p>
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/star-bookmark-favorite-shape-rank-16-28621.png" alt="star"> 7.5
+                </div>
+                <div class="card" id="Project power">
+                    <img src="https://upload.wikimedia.org/wikipedia/ar/f/fc/Project_Power_poster.jpg" class="img_card">
+                    <p class="name">Project power</p>
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/star-bookmark-favorite-shape-rank-16-28621.png" alt="star"> 8.5
+                </div>
+                <div class="card" id="the parmedic">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlhZ1YsJyPnqhHuFgSB3GWhQthfmCTehmLB2n7aWSoa7bCKYpw" class="img_card">
+                    <p class="name">the parmedic</p>
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/star-bookmark-favorite-shape-rank-16-28621.png" alt="star"> 8.5
+                </div>
+                <div class="card" id="Da 5 bloodes">
+                    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTHdxob058zWbaDjGY8onzkO6vkmwXlitBdNxfWWSgQuhLFF_qy" class="img_card">
+                    <p class="name">Da 5 bloodes</p>
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/star-bookmark-favorite-shape-rank-16-28621.png" alt="star"> 6.7
+                </div>
+                <div class="card" id="Drive">
+                    <img src="https://i.pinimg.com/originals/f5/7b/52/f57b522ab344f876a9657dde8b2ed5bb.jpg" class="img_card">
+                    <p class="name">Drive</p>
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/star-bookmark-favorite-shape-rank-16-28621.png" alt="star"> 5.9
+                </div>
+                <div class="card" id="Tesla">
+                    <img src="https://cdn.mos.cms.futurecdn.net/KF8tuewW9eenkLJmuYg5iZ-1200-80.jpg" class="img_card">
+                    <p class="name">Tesla</p>
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/star-bookmark-favorite-shape-rank-16-28621.png" alt="star"> 8.4
+                </div>
+                <div class="card" id="1917">
+                    <img src="https://cdn.shopify.com/s/files/1/0969/9128/products/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7.jpg?v=1582781089" class="img_card">
+                    <p class="name">1917</p>
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/star-bookmark-favorite-shape-rank-16-28621.png" alt="star"> 9.8
+                </div>
+                <div class="card" id="Moonlight">
+                    <img src="https://i.pinimg.com/originals/c8/28/fd/c828fd10c725aa584639c61601283880.jpg" class="img_card">
+                    <p class="name">Moonlight</p>
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/star-bookmark-favorite-shape-rank-16-28621.png" alt="star"> 7.8
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        var search = document.getElementById("search"),
+            h2OfBody = document.getElementById("h2OfBody");
+
+        search.onchange = function(){
+            switch(search.value){
+                case "Dangerous lies":
+                    document.getElementById("Dangerous lies").style.display = "initial";
+                    document.getElementById("Project power").style.display = "none";
+                    document.getElementById("the parmedic").style.display = "none";
+                    document.getElementById("Da 5 bloodes").style.display = "none";
+                    document.getElementById("Drive").style.display = "none";
+                    document.getElementById("Tesla").style.display = "none";
+                    document.getElementById("1917").style.display = "none";
+                    document.getElementById("Moonlight").style.display = "none";
+                    h2OfBody.innerHTML = "Resule";
+                    break;
+                case "Project power":
+                    document.getElementById("Dangerous lies").style.display = "none";
+                    document.getElementById("Project power").style.display = "initial";
+                    document.getElementById("the parmedic").style.display = "none";
+                    document.getElementById("Da 5 bloodes").style.display = "none";
+                    document.getElementById("Drive").style.display = "none";
+                    document.getElementById("Tesla").style.display = "none";
+                    document.getElementById("1917").style.display = "none";
+                    document.getElementById("Moonlight").style.display = "none";
+                    h2OfBody.innerHTML = "Resule";
+                    break;
+                case "the parmedic":
+                    document.getElementById("Dangerous lies").style.display = "none";
+                    document.getElementById("Project power").style.display = "none";
+                    document.getElementById("the parmedic").style.display = "initial";
+                    document.getElementById("Da 5 bloodes").style.display = "none";
+                    document.getElementById("Drive").style.display = "none";
+                    document.getElementById("Tesla").style.display = "none";
+                    document.getElementById("1917").style.display = "none";
+                    document.getElementById("Moonlight").style.display = "none";
+                    h2OfBody.innerHTML = "Resule";
+                    break;
+                case "Da 5 bloodes":
+                    document.getElementById("Dangerous lies").style.display = "none";
+                    document.getElementById("Project power").style.display = "none";
+                    document.getElementById("the parmedic").style.display = "none";
+                    document.getElementById("Da 5 bloodes").style.display = "initial";
+                    document.getElementById("Drive").style.display = "none";
+                    document.getElementById("Tesla").style.display = "none";
+                    document.getElementById("1917").style.display = "none";
+                    document.getElementById("Moonlight").style.display = "none";
+                    h2OfBody.innerHTML = "Resule";
+                    break;
+                case "Drive":
+                    document.getElementById("Dangerous lies").style.display = "none";
+                    document.getElementById("Project power").style.display = "none";
+                    document.getElementById("the parmedic").style.display = "none";
+                    document.getElementById("Da 5 bloodes").style.display = "none";
+                    document.getElementById("Drive").style.display = "initial";
+                    document.getElementById("Tesla").style.display = "none";
+                    document.getElementById("1917").style.display = "none";
+                    document.getElementById("Moonlight").style.display = "none";
+                    h2OfBody.innerHTML = "Resule";
+                    break;
+                case "Tesla":
+                    document.getElementById("Dangerous lies").style.display = "none";
+                    document.getElementById("Project power").style.display = "none";
+                    document.getElementById("the parmedic").style.display = "none";
+                    document.getElementById("Da 5 bloodes").style.display = "none";
+                    document.getElementById("Drive").style.display = "none";
+                    document.getElementById("Tesla").style.display = "initial";
+                    document.getElementById("1917").style.display = "none";
+                    document.getElementById("Moonlight").style.display = "none";
+                    h2OfBody.innerHTML = "Resule";
+                    break;
+                case "1917":
+                    document.getElementById("Dangerous lies").style.display = "none";
+                    document.getElementById("Project power").style.display = "none";
+                    document.getElementById("the parmedic").style.display = "none";
+                    document.getElementById("Da 5 bloodes").style.display = "none";
+                    document.getElementById("Drive").style.display = "none";
+                    document.getElementById("Tesla").style.display = "none";
+                    document.getElementById("1917").style.display = "initial";
+                    document.getElementById("Moonlight").style.display = "none";
+                    h2OfBody.innerHTML = "Resule";
+                    break;
+                case "Moonlight":
+                    document.getElementById("Dangerous lies").style.display = "none";
+                    document.getElementById("Project power").style.display = "none";
+                    document.getElementById("the parmedic").style.display = "none";
+                    document.getElementById("Da 5 bloodes").style.display = "none";
+                    document.getElementById("Drive").style.display = "none";
+                    document.getElementById("Tesla").style.display = "none";
+                    document.getElementById("1917").style.display = "none";
+                    document.getElementById("Moonlight").style.display = "initial";
+                    h2OfBody.innerHTML = "Resule";
+                    break;
+                case "":
+                    document.getElementById("Dangerous lies").style.display = "initial";
+                    document.getElementById("Project power").style.display = "initial";
+                    document.getElementById("the parmedic").style.display = "initial";
+                    document.getElementById("Da 5 bloodes").style.display = "initial";
+                    document.getElementById("Drive").style.display = "initial";
+                    document.getElementById("Tesla").style.display = "initial";
+                    document.getElementById("1917").style.display = "initial";
+                    document.getElementById("Moonlight").style.display = "initial";
+                    h2OfBody.innerHTML = " picked for you ";
+                    break;
+                default :
+                    h2OfBody.innerHTML = "No Resule";
+                    cards.style.visibility = "hidden";
+                    break;
+            }
+        }
+        search.onclick = function(){
+            document.getElementById("Dangerous lies").style.display = "initial";
+            document.getElementById("Project power").style.display = "initial";
+            document.getElementById("the parmedic").style.display = "initial";
+            document.getElementById("Da 5 bloodes").style.display = "initial";
+            document.getElementById("Drive").style.display = "initial";
+            document.getElementById("Tesla").style.display = "initial";
+            document.getElementById("1917").style.display = "initial";
+            document.getElementById("Moonlight").style.display = "initial";
+        }
+    </script>
+</body>
+</html>
